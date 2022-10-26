@@ -1,0 +1,1 @@
+self.__RSC_CSS_MANIFEST={"__entry_css__":{"/Users/simon/Code/blog/web/app/blog/[id]/page":["/Users/simon/Code/blog/web/app/globals.css"],"/Users/simon/Code/blog/web/app/blog/list/page":["/Users/simon/Code/blog/web/app/globals.css"],"/Users/simon/Code/blog/web/app/page":["/Users/simon/Code/blog/web/app/globals.css"]}}
