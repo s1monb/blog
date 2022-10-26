@@ -1,0 +1,6 @@
+{
+  "/blog/[id]/page": "/blog/[id]",
+  "/blog/list/[tag]/page": "/blog/list/[tag]",
+  "/blog/list/page": "/blog/list",
+  "/page": "/"
+}

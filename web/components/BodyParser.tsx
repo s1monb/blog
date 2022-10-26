@@ -55,41 +55,40 @@ export const BodyParser = ({
                         ),
                     },
                     types: {
-                        code: ({ value }) => {
-                            const [isCopied, setCopied] = useClipboard(
-                                value.code,
-                                {
-                                    successDuration: 4000,
-                                }
-                            );
-
-                            return (
-                                <div className="relative">
-                                    <button
-                                        onClick={setCopied}
-                                        className="absolute right-4 top-4 p-1 hover:bg-white/10 text-white/50 rounded-md"
-                                    >
-                                        {isCopied ? (
-                                            <>
-                                                <Check className="text-white" />
-                                                <p className="text-xs absolute bottom-2 -left-[45px] text-white">
-                                                    copied
-                                                </p>
-                                            </>
-                                        ) : (
-                                            <Clipboard />
-                                        )}
-                                    </button>
-                                    <Refractor
-                                        language={value.language}
-                                        value={value.code}
-                                        markers={value.highlightedLines}
-                                    />
-                                </div>
-                            );
-                        },
+                        code: ({ value }) => <Code value={value} />,
                     },
                 }}
+            />
+        </div>
+    );
+};
+
+const Code = ({ value }: any) => {
+    const [isCopied, setCopied] = useClipboard(value.code, {
+        successDuration: 4000,
+    });
+
+    return (
+        <div className="relative">
+            <button
+                onClick={setCopied}
+                className="absolute right-4 top-4 p-1 hover:bg-white/10 text-white/50 rounded-md"
+            >
+                {isCopied ? (
+                    <>
+                        <Check className="text-white" />
+                        <p className="text-xs absolute bottom-2 -left-[45px] text-white">
+                            copied
+                        </p>
+                    </>
+                ) : (
+                    <Clipboard />
+                )}
+            </button>
+            <Refractor
+                language={value.language}
+                value={value.code}
+                markers={value.highlightedLines}
             />
         </div>
     );

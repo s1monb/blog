@@ -1,0 +1,7 @@
+- [x] Blog pages to include code-snippet with copy button
+- [] Footer with contact-info
+- [x] Filter by tags 
+- [] Responses to blog-posts
+- [] Search for blogposts
+- [] Projects-page with all projects
+- [] Cool projects showcase at top of projects-page
